@@ -1,6 +1,5 @@
 import { src, dest, watch, series, parallel } from "gulp";
 import yargs from "yargs";
-import sass from "gulp-sass";
 import cleanCss from "gulp-clean-css";
 import gulpif from "gulp-if";
 import postcss from "gulp-postcss";
@@ -16,6 +15,8 @@ import named from "vinyl-named";
 import replace from "gulp-replace-task";
 import wpPot from "gulp-wp-pot";
 
+
+let sass = require('gulp-sass')(require('sass'));
 require("dotenv").config();
 
 const PRODUCTION = yargs.argv.prod;
