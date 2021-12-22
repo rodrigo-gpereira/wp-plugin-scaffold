@@ -1,0 +1,24 @@
+{
+    "name": "rodrigo/wp-plugin-scaffold",
+    "description": "Wordpress Plugin Scaffold",
+    "type": "project",
+    "require-dev": {
+        "giacocorsiglia/wordpress-stubs": "^5.1",
+        "paulthewalton/acf-stubs": "^5.8"
+    },
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Rodrigo Gomes",
+            "email": "digoartmusic@outlook.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "WPS\\Core\\":"core/",
+        "WPS\\Includes\\":"includes/"
+      }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
