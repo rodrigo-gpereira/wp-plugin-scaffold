@@ -10,10 +10,11 @@ import del from "del";
 import webpack from "webpack-stream";
 import browserSync from "browser-sync";
 import zip from "gulp-zip";
-import info from "./package.json";
 import named from "vinyl-named";
 import replace from "gulp-replace-task";
+import rename from "gulp-rename";
 import wpPot from "gulp-wp-pot";
+import info from "./package.json";
 
 
 let sass = require('gulp-sass')(require('sass'));
@@ -187,8 +188,15 @@ export const compress = () => {
     "!composer.json",
     "!composer.lock"
   ])
-    .pipe(zip(`${info.name}.zip`))
-    .pipe(dest("../"));
+      .pipe(
+          rename(
+              function(path) {
+                path.dirname = `${info.name}/${path.dirname}`;
+              }
+          )
+      )
+      .pipe(zip(`${info.name}-${info.version}.zip`))
+      .pipe(dest("../"));
 };
 
 // Build e Dev Run

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Wordpress Plugin Scaffold src
+ * Plugin Name:       Wordpress Plugin Scaffold
  * Plugin URI:        https://infografic.com.br
  * Description:       Wordpress Plugin Scaffold.
  * Version:           0.1.0
