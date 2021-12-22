@@ -24,6 +24,10 @@ if ( ! defined( 'WPS_PLUGIN_FILE' ) ) {
     define('WPS_PLUGIN_FILE', __FILE__);
 }
 
+if ( ! defined( 'WPS_PLUGIN_VERSION' ) ) {
+    define('WPS_PLUGIN_VERSION', '0.1.0');
+}
+
 if ( ! defined( 'WPS_PLUGIN_PATH' ) ) {
     define('WPS_PLUGIN_PATH', untrailingslashit( plugin_dir_path( WPS_PLUGIN_FILE) ));
 }

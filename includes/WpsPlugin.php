@@ -16,10 +16,7 @@ final class WpsPlugin
 	 * The Singleton's constructor should always be private to prevent direct
 	 * construction calls with the `new` operator.
 	 */
-	protected function __construct()
-	{
-
-	}
+	protected function __construct() { }
 
 	/**
 	 * Singletons should not be cloneable.
@@ -41,6 +38,7 @@ final class WpsPlugin
 
 	public function init()
 	{
+	    Assets::init();
 	}
 
 	public function activate()
@@ -52,5 +50,25 @@ final class WpsPlugin
 	{
 		Deactivate::deactivate();
 	}
+
+    /**
+     * Get the plugin url.
+     *
+     * @return string
+     */
+    public function plugin_url()
+    {
+        return WPS_PLUGIN_URL;
+    }
+
+    /**
+     * Get the plugin path.
+     *
+     * @return string
+     */
+    public function plugin_path()
+    {
+        return WPS_PLUGIN_PATH;
+    }
 
 }
